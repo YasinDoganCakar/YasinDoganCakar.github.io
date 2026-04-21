@@ -1,0 +1,115 @@
+html, body{
+	/* Kenardaki küçük boşlukları kaldırmak için */
+	margin: 0;
+
+	/* Cihazın ekranına tam oturması için */
+	height: 100vh;
+	width: 100vw;
+
+	/* Arka plan resmi eklemek için */
+	background-image: url("https://static.colourlovers.com/images/patterns/6048/6048411.png?1776419605");
+}
+
+body{
+	/* body içindeki 3 adet alanı flex ile yönetmek için */
+	display: flex;
+
+	/* body içindeki alanları dikey olarak sıralamak için */
+	flex-direction: column;
+}
+
+/* Sayfadaki 3 adet yatay alanın ortak özellikleri */
+.page_row{
+	/* Genişliği cihazın ekranına tam oturması için */
+	width: 100%;
+
+	/* Yazıların boyutu büyük olsun diye */
+	font-size: xx-large;
+}
+
+/* Üstteki alanın özellikleri */
+#top{
+	/* Ekranın üstten %40'ını kaplaması için */
+	height: 40%;
+
+	/* Yazıları ortalamak için */
+	text-align: center;
+
+	/* p taglarını flex ile yönetmek için */
+	display: flex;
+
+	/* p taglarını dikey olarak sıralamak için */
+	flex-direction: column;
+
+	/* p taglarını alta yaslamak için */
+	justify-content: end;
+}
+
+#center{
+	/* Ekranın üstten %45'ini kaplaması için */
+	height: 45%;
+	
+	/* Oyun alanını flex ile yönetmek için */
+	display: flex;
+}
+
+#footer{
+	/* Ekranın geri kalan %15'ini kaplaması için */
+	height: 15%;
+}
+
+/* Oyun metninin özellikleri */
+#key{
+	color: red;
+}
+
+/* Oyun metninin özellikleri */
+#score{
+	color: blue;
+}
+
+/* Renkli kutuları bir arada tutan alanın özellikleri */
+#game_area{
+	/* Orta alanın yüksekliğinin tamamını kaplaması için */
+	height: 100%;
+	
+	/* Sağdan ve soldan ortalanması için */
+	margin: auto;
+
+	/* Her zaman kare şeklinde olması için kalıp */
+	max-width: 100%;
+	max-height: 100%;
+	aspect-ratio: 1 / 1;
+
+	/* İçindeki 4 adet kutuyu flex ile yönetmek için */
+    display: flex;
+
+	/* İlk başta yan yana sıralamak için */
+    flex-direction: row;
+
+	/* Kutuların 100% geçerse alt satıra geçmesi için */
+	flex-wrap: wrap;
+}
+
+.color_tab{
+	/* Renkli kutular küçülmesin, büyümesin game_area alanının yarısını kaplasın diye */
+	/* Bu sayede 4 tane olunca 2 tanesi üstte, 2 tanesi altta olur */ 
+	flex: 0 0 50%;
+}
+
+/* Renkli kutuların özellikleri */
+#blue{
+	background-color: blue;
+}
+
+#yellow{
+	background-color: yellow;
+}
+
+#red{
+	background-color: red;
+}
+
+#black{
+	background-color: black;
+}
