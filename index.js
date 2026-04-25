@@ -27,7 +27,7 @@ function clickBox(color) {
         score--;
     }
 
-    if(score === 0){
+    if(score <= 0){
         alert('Oyun Bitti');
     }
 
